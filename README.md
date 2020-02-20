@@ -1,3 +1,17 @@
+- Сайт с билдом https://boring-sammet-a3e516.netlify.com/
+- Не забываем настраивать .env
+- Ссылки, которые стоит почитать/искать там:
+       https://habr.com/ru/post/439232/
+       https://www.gatsbyjs.org/
+       https://www.contentful.com/developers/docs/tutorials/general/setting-locales/
+       https://habr.com/ru/post/442298/
+
+
+
+
+
+
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
