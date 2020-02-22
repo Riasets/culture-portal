@@ -32,7 +32,7 @@ export default function CheckboxLabels() {
   };
 
   return (
-    <FormGroup class="custom-checkboxes">
+    <FormGroup className="custom-checkboxes">
       <FormControlLabel
         control={
           <Checkbox checked={state.checkedA} onChange={handleChange('checkedA')} value="checkedA" />

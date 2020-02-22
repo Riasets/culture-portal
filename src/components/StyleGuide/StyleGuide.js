@@ -5,6 +5,7 @@ import CustomButton from './elements/CustomButton';
 import CheckboxLabels from './elements/CustomCheckbox';
 import RadioButtons from './elements/CustomRadioButtons';
 import Switches from './elements/Switch';
+import SimpleTable from './elements/Table';
 
 import HomeIcon from '@material-ui/icons/Home';
 import FaceIcon from '@material-ui/icons/Face';
@@ -53,6 +54,8 @@ function StyleGuide() {
             <WorkIcon className="icon-color"/>
           </div>
         </div>
+        <h3>Table:</h3>
+        <SimpleTable />
       </div>
     </div>
   );
