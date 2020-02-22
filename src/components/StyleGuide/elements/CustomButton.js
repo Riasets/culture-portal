@@ -17,6 +17,6 @@ const StyledButton = withStyles({
   },
 })(Button);
 
-export default function CustomButton() {
-  return <StyledButton>classes shorthand</StyledButton>;
+export default function CustomButton(props) {
+  return <StyledButton>{props.text}</StyledButton>;
 }
