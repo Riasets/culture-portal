@@ -56,6 +56,8 @@ function StyleGuide() {
         </div>
         <h3>Table:</h3>
         <SimpleTable />
+        <h3>Main fonts: Roboto, Georgia!</h3>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
       </div>
     </div>
   );
