@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import PropTypes from "prop-types"
 import { withStyles } from '@material-ui/core/styles';
 
 const StyledButton = withStyles({
@@ -17,6 +18,14 @@ const StyledButton = withStyles({
   },
 })(Button);
 
-export default function CustomButton(props) {
-  return <StyledButton>{props.text}</StyledButton>;
+export default function CustomButton({ text }) {
+  return <StyledButton>{text}</StyledButton>;
+}
+
+CustomButton.propTypes = {
+  text: PropTypes.string,
+}
+
+CustomButton.defaultProps = {
+  text: ``,
 }
