@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import { makeStyles } from '@material-ui/core/styles';
 
 import CustomButton from './elements/CustomButton';
 import CheckboxLabels from './elements/CustomCheckbox';
@@ -13,15 +14,60 @@ import PeopleIcon from '@material-ui/icons/People';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import WorkIcon from '@material-ui/icons/Work';
 
+const useStyles = makeStyles({
+  styleGuideWrapper: {
+    color: 'white',
+    zIndex: -99999,
+    textAlign: 'center',
+    '& h2': {
+      margin: '50px 0px',
+      fontSize: '50px',
+    },
+    '& h3': {
+      marginTop: '50px',
+      fontSize: '30px',
+      color: '#839496',
+    },
+  },
+  mainColors: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    '& div': {
+      width: '200px',
+      height: '200px',
+      margin: '10px',
+    },
+  },
+  red: {
+    backgroundColor: '#f50057',
+  },
+  orange: {
+    backgroundColor: '#fb8c00',
+  },
+  iconContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    '& p': {
+      margin: 0,
+    },
+    '& div': {
+      margin: '10px',
+    },
+  }
+});
+
 function StyleGuide() {
+  const classes = useStyles();
   return (
-    <div className="style-guide-wrapper">
+    <div className={classes.styleGuideWrapper}>
       <h2>Style Guide Page!</h2>
       <div>
         <h3>Main colors:</h3>
-        <div className="main-colors">
-          <div className="orange"></div>
-          <div className="red"></div>
+        <div className={classes.mainColors}>
+          <div className={classes.orange}></div>
+          <div className={classes.red}></div>
         </div>
         <h3>Button:</h3>
         <CustomButton text="Hello!" />
@@ -32,7 +78,7 @@ function StyleGuide() {
         <h3>Switches:</h3>
         <Switches />
         <h3>Icons:</h3>
-        <div className="icon-container">
+        <div className={classes.iconContainer}>
           <div>
             <p>Home</p>
             <HomeIcon className="icon-color"/>

@@ -2,14 +2,7 @@ body {
   background-color: #2B3E50;
 }
 
-.style-guide-wrapper {
-  color: white;
-  z-index: -99999;
-  text-align: center;
-}
-
 a {
-  /* color: white !important; */
   text-decoration: none
 }
 
@@ -19,54 +12,9 @@ a {
   align-items: center;
 }
 
-.style-guide-wrapper h2 {
-  margin: 50px 0px;
-  font-size: 50px;
-}
-
-.style-guide-wrapper h3 {
-  margin-top: 50px;
-  font-size: 30px;
-  color: #839496;
-}
-
 .radio-buttons {
   display: flex;
   justify-content: center;
-}
-
-.main-colors div {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-}
-
-.main-colors {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.red {
-  background-color: #f50057;
-}
-
-.orange {
-  background-color: #fb8c00;
-}
-
-.icon-container p {
-  margin: 0;
-}
-
-.icon-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.icon-container div{
-  margin: 10px;
 }
 
 .icon-color {
