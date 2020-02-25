@@ -9,9 +9,6 @@ import SEO from "../components/seo"
 
 const langs = ['ru', 'by', 'en'];
 
-
-
-
 const IndexPage = ({data}) => {
 
   return(
@@ -25,6 +22,8 @@ const IndexPage = ({data}) => {
       </div>
       <p>{data.contentfulLongText.by.content[0].content[0].value}</p>
       <Link to="/page-2/">Go to page 2</Link>
+      <br />
+      <Link to="/styleGuide/">Go to style guide</Link>
     </Layout>
   )
 }
