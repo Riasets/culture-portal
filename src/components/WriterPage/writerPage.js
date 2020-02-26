@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import WritersInfo from "./Writers";
 import './style.css';
 import PropTypes from "prop-types";
+import CustomButton from '../StyleGuide/elements/CustomButton';
+
 
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 
@@ -11,6 +13,7 @@ class WriterPage extends Component {
     this.state = {
       isAuthorInfo: false,
       authorInfo: null,
+      isVideoOn: false,
     }
   }
 
@@ -26,6 +29,8 @@ class WriterPage extends Component {
       isAuthorInfo: false,
     });
   }
+
+
 
   render() {
     const writersList = WritersInfo.map((el) =>
@@ -54,18 +59,38 @@ class WriterPage extends Component {
 function AuthorInfo({ authorObj }) {
   return (
     <div>
-            <div className='writer-image'>
-                <img src={authorObj.Picture} alt={authorObj.name}/>
-            </div>
-            <div className='writer-info'>
-                <h1 className='name'>{authorObj.name}</h1>
-                <h3 className='years'>{authorObj.lifeTime}</h3>
-            </div>
-            <div className='biography'>
-                {authorObj.ShortInfo}
+        <div className='writer-image'>
+            <img src={authorObj.Picture} alt={authorObj.name} width='250' height='300'/>
+        </div>
+        <div className='writer-info'>
+            <h1 className='name'>{authorObj.name}</h1>
+            <h3 className='years'>{authorObj.lifeTime}</h3>
+        </div>
+        <div className='biography'>
+            {authorObj.ShortInfo}
+        </div>
+        <div className='timeLine'>
+            <h2 className='section-name'>TimeLine</h2>
+        </div>
+        <div className='workList'>
+            <h2 className='section-name'>Masterpiece</h2>
+        </div>
+        <div className='video-section'>
+            <h2 className='section-name'>YouTube</h2>
+            <div className='videoButton'>
+                <CustomButton text="Watch the video" />
             </div>
         </div>
-  );
+        <div className='map-sextion'>
+            <h2 className='section-name'>Map</h2>
+            <div className='map-wrapper'>
+            </div>
+        </div>
+        <div className='gallery'>
+            <h2 className='section-name'>Gallery</h2>
+        </div>
+    </div>
+    );
 }
 
 AuthorInfo.propTypes = {
