@@ -1,4 +1,3 @@
-import './style.css';
 import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {elaray, aplefull, dexnkt, anastasiaKrbvsk, riasets} from './tableData';
@@ -31,15 +30,13 @@ const useStyles = makeStyles({
             fontWeight: 'bold',
             fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
             marginBottom: 5,
-        }
-    },
-    bottomWrapper: {
-        marginBottom: '80px !important',
+        },
     },
     worklogCheckboxes: {
         width: '95%',
         maxWidth: 320,
         margin: 'auto',
+        marginTop: 80,
         display: 'flex',
         flexDirection: 'column',
         color: 'white',
@@ -48,7 +45,7 @@ const useStyles = makeStyles({
         width: '95%',
         maxWidth: 500,
         margin: '0 auto',
-        marginTop: '70px !important',
+        marginTop: 70,
         '& p': {
             fontSize: 20,
             color: 'white',
@@ -84,7 +81,7 @@ function WorkLog() {
                 <p>Anastasia</p>
                 <SimpleTable rows={anastasiaKrbvsk}/>
             </div>
-            <div className = {`${classes.tableWrappper} ${classes.bottomWrapper}`}>
+            <div className = {classes.tableWrappper}>
                 <p>Alexander</p>
                 <SimpleTable rows={riasets}/>
             </div>

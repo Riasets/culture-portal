@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
   worklogPrimaryCheckbox: {
-    marginLeft: '20px !important',
+    marginLeft: 20,
   }
 });
 
