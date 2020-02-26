@@ -1,10 +1,4 @@
-body {
-    background-color: #2B3E50;
-}
-
-a {
-    text-decoration: none
-}
+@import "~react-image-gallery/styles/css/image-gallery.css";
 
 .section-name {
     text-align: center;
@@ -38,4 +32,8 @@ a {
     margin: 20px;
     text-align: center;
     font-size: 24px;
+}
+
+.author-page {
+  color: white;
 }

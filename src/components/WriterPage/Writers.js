@@ -11,7 +11,7 @@ const Writer = [
         ['1916-1918', 'he did not create a single work, but later Yanka Kupala, in his lyrics, addressed the theme of the survival of an individual and the people as a whole during a historical turning point.'],
         ['1930', 'there was a suicide attempt (cut the veins in the bath). His daughter saved'],
         ['1942', 'The poet fell into a flight of stairs between the 9th and 10th floors of the hotel, death was instant']],
-        works: [['1908', '"pipes"'], ['1910', '"Guslar"'], ['1913', '"The road of life"'], ['1922', '"Heritage"'],
+        works: [['1908', '"Pipes"'], ['1910', '"Guslar"'], ['1913', '"The road of life"'], ['1922', '"Heritage"'],
         ['1925', '"Nameless"'], ['1930', '"Flowering"'], ['1936', '"Song building"'], ['1937', '"Belarus Order"'],
         ['1940', '"From the heart"'], ['1942', '"Belarusian partisans"']],
         photos: ['https://sun9-5.userapi.com/c858232/v858232327/189f74/d1lRXLzNnWo.jpg', 'https://sun9-55.userapi.com/c206620/v206620233/7ffbf/ckvT0RPft1s.jpg', 'https://sun9-7.userapi.com/c205720/v205720010/7f7fa/jEzEtM2dHNo.jpg', 'https://sun9-67.userapi.com/c857232/v857232984/f7b76/PYJZkpL5YLU.jpg'],
