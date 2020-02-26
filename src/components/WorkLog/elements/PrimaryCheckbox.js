@@ -2,6 +2,13 @@ import React from 'react';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import PropTypes from "prop-types";
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  worklogPrimaryCheckbox: {
+    marginLeft: '20px !important',
+  }
+});
 
 export default function CheckboxLabels(props) {
   const [state, setState] = React.useState({
@@ -11,9 +18,10 @@ export default function CheckboxLabels(props) {
     checkedG: true,
   });
 
+  const classes = useStyles();
   return (
       <FormControlLabel
-      className='worklog-primary-checkbox'
+      className={classes.worklogPrimaryCheckbox}
         control={
           <Checkbox
             checked={state.checkedB}

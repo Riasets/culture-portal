@@ -1,36 +1,94 @@
-import React, { Fragment } from 'react';
 import './style.css';
-import SimpleTable from './elements/Table';
+import React, { Fragment } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import {elaray, aplefull, dexnkt, anastasiaKrbvsk, riasets} from './tableData';
+import SimpleTable from './elements/Table';
 import PrimaryCheckbox from './elements/PrimaryCheckbox';
 import SecondaryCheckbox from './elements/SecondaryCheckbox';
 import PropTypes from "prop-types";
 
+const useStyles = makeStyles({
+    worklogTitle: {
+        textAlign: 'center',
+        color: 'white',
+        fontSize: 60,
+        fontWeight: 'bold',
+        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+        marginTop: 180,
+        marginBottom: 45,
+    },
+    tableWrappper: {
+        width: '100%',
+        ['@media only screen and (max-width: 750px)']: {
+            width: '95%'
+        },
+        maxWidth: 700,
+        margin: 'auto',
+        marginTop: 45,
+        '& p': {
+            color: 'white',
+            fontSize: 20,
+            fontWeight: 'bold',
+            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+            marginBottom: 5,
+        }
+    },
+    bottomWrapper: {
+        marginBottom: '80px !important',
+    },
+    worklogCheckboxes: {
+        width: '95%',
+        maxWidth: 320,
+        margin: 'auto',
+        display: 'flex',
+        flexDirection: 'column',
+        color: 'white',
+    },
+    difficulties: {
+        width: '95%',
+        maxWidth: 500,
+        margin: '0 auto',
+        marginTop: '70px !important',
+        '& p': {
+            fontSize: 20,
+            color: 'white',
+            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+            fontWeight: 'bold',
+        }
+    },
+    difficultiesList: {
+        marginLeft: 40,
+        color: 'white',
+        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    }
+});
+
 function WorkLog() {
+    const classes = useStyles(); 
     return (
         <Fragment>
-            <h1 className='worklog-title'>WorkLog page.</h1>
-            <div className = 'table-wrapper'>
-                <p className = 'person-name'>Egor</p>
+            <h1 className={classes.worklogTitle}>WorkLog page.</h1>
+            <div className = {classes.tableWrappper}>
+                <p>Egor</p>
                 <SimpleTable rows={elaray}/>
             </div>
-            <div className = 'table-wrapper'>
-                <p className = 'person-name'>Artyom</p>
+            <div className = {classes.tableWrappper}>
+                <p>Artyom</p>
                 <SimpleTable rows={aplefull}/>
             </div>
-            <div className = 'table-wrapper'>
-                <p className = 'person-name'>Nikita</p>
+            <div className = {classes.tableWrappper}>
+                <p>Nikita</p>
                 <SimpleTable rows={dexnkt}/>
             </div>
-            <div className = 'table-wrapper'>
-                <p className = 'person-name'>Anastasia</p>
+            <div className = {classes.tableWrappper}>
+                <p>Anastasia</p>
                 <SimpleTable rows={anastasiaKrbvsk}/>
             </div>
-            <div className = 'table-wrapper bottom-wrapper'>
-                <p className = 'person-name'>Alexander</p>
+            <div className = {`${classes.tableWrappper} ${classes.bottomWrapper}`}>
+                <p>Alexander</p>
                 <SimpleTable rows={riasets}/>
             </div>
-            <div className='worklog-checkboxes'>
+            <div className={classes.worklogCheckboxes}>
                 <SecondaryCheckbox text={'Main page'}/>
                 <PrimaryCheckbox text={'portal\'s description'}/>
                 <PrimaryCheckbox text={'\'author of the day\' block'}/>
@@ -63,9 +121,9 @@ function WorkLog() {
                 <SecondaryCheckbox text={'Deployment'}/>
                 <SecondaryCheckbox text={'Different languages'}/>
             </div>
-            <div className='difficulties'>
+            <div className={classes.difficulties}>
                 <p>Main difficulties:</p>
-                <ul className='difficulties-list'>
+                <ul className={classes.difficultiesList}>
                     <li>Splitting the task</li>
                     <li>Understanding what each person should do</li>
                 </ul>
