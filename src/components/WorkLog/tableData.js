@@ -1,23 +1,22 @@
 function createData(description, hours) {
     return { description, hours };
 }
-  
+
+//Удаляем стандартные createData() и добавляем свои по такому же принципу
+
 const elaray = [
     createData('Add custom button', '1h'),
     createData('Add icons and main colors', '0.5h'),
-    createData('Yeet', '120h'),
 ];
 
 const aplefull = [
     createData('Add custom button', '1h'),
     createData('Add icons and main colors', '0.5h'),
-    createData('Yeet', '12h'),
 ];
 
 const dexnkt = [
     createData('Add custom button', '1h'),
     createData('Add icons and main colors', '0.5h'),
-    createData('Watching hentai', '72h'),
 ];
 
 const anastasiaKrbvsk = [
