@@ -15,7 +15,7 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'space-around',
         flexWrap: 'wrap',
-        fontFamily: "Roboto",
+        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     },
     teammateBlock: {
         width: '190px',
