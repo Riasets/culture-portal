@@ -60,31 +60,25 @@ const useStyles = makeStyles({
     }
 });
 
+const people = [
+    {name: 'Egor', data: elaray},
+    {name: 'Artyom', data: aplefull},
+    {name: 'Nikita', data: dexnkt},
+    {name: 'Anastasia', data: anastasiaKrbvsk},
+    {name: 'Alexander', data: riasets},
+];
+
 function WorkLog() {
     const classes = useStyles(); 
     return (
         <Fragment>
             <h1 className={classes.worklogTitle}>WorkLog page.</h1>
-            <div className = {classes.tableWrappper}>
-                <p>Egor</p>
-                <SimpleTable rows={elaray}/>
-            </div>
-            <div className = {classes.tableWrappper}>
-                <p>Artyom</p>
-                <SimpleTable rows={aplefull}/>
-            </div>
-            <div className = {classes.tableWrappper}>
-                <p>Nikita</p>
-                <SimpleTable rows={dexnkt}/>
-            </div>
-            <div className = {classes.tableWrappper}>
-                <p>Anastasia</p>
-                <SimpleTable rows={anastasiaKrbvsk}/>
-            </div>
-            <div className = {classes.tableWrappper}>
-                <p>Alexander</p>
-                <SimpleTable rows={riasets}/>
-            </div>
+            {people.map(item => (
+                <div className={classes.tableWrappper} key={item.name}>
+                    <p>{item.name}</p>
+                    <SimpleTable rows={item.data}/>
+                </div>
+            ))}
             <div className={classes.worklogCheckboxes}>
                 <SecondaryCheckbox text={'Main page'}/>
                 <PrimaryCheckbox text={'portal\'s description'}/>
