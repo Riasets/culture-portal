@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
       <p>{data.contentfulLongText.by.content[0].content[0].value}</p>
       <Link to="/page-2/">Go to page 2</Link>
       <br />
-      <Link to="/TeamP/">Go to Team</Link>
+      <Link to="/team-page/">Go to Team</Link>
     </Layout>
   )
 }
