@@ -1,9 +1,23 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
+.writer-list {
+    width: 550px;
+    margin: 40px auto;
+}
+
+.list-item {
+    list-style: none;
+    cursor: pointer;
+    font-size: 23px;
+    padding: 5px;
+}
+
 .section-name {
     text-align: center;
     font-size: 42px;
     color: #f50057;
+    height: 45px;
+    margin: 30px;
 }
 
 .writer-image {
@@ -36,4 +50,15 @@
 
 .author-page {
   color: white;
+}
+
+.videoButton {
+    width: 190px;
+    margin: 20px auto;
+}
+
+.map-wrapper {
+    width: 500px;
+    height: 450px;
+    margin: 20px auto;
 }

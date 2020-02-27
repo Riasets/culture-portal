@@ -36,10 +36,10 @@ class WriterPage extends Component {
 
   render() {
     const writersList = WritersInfo.map((el) =>
-      <li key={el.id} id={el.id} onClick={this.handleClick.bind(this, el)}>{el.name}</li>
+      <li key={el.id} id={el.id} onClick={this.handleClick.bind(this, el)} className="list-item">{el.name}</li>
     );
     const content = !this.state.isAuthorInfo ?
-    <ul>
+    <ul className="writer-list">
       {writersList}
     </ul>
     :
@@ -158,7 +158,7 @@ class AuthorInfo extends Component {
           <div className='video-section'>
               <h2 className='section-name'>YouTube</h2>
               <div className='videoButton'>
-                  <a href={authorObj.video}><CustomButton text="Watch the video" /></a>
+                  <a href={authorObj.video} target="_blank"><CustomButton text="Watch the video" /></a>
               </div>
           </div>
           <div className='map-sextion'>
