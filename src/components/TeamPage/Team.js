@@ -6,9 +6,10 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles({
     content: {
-        width: '80%',
         textAlign: 'center',
-        marginLeft: '10%',
+        '& h1': {
+            color: '#f50057',
+        }
     },
     all_team: {
         marginTop: '40px',
@@ -25,6 +26,14 @@ const useStyles = makeStyles({
         boxShadow: '0px 0px 10px #fb8c00',
         backgroundColor: 'rgb(40, 63, 83)',
         margin: '20px 20px 0px 20px',
+        transition: 'ease-out 0.3s',
+        '&:hover': {
+            boxShadow: '0px 0px 20px #f50057',
+            width: '200px',
+            margin: '10px 15px 0px 15px',
+            height: '360px'
+        }
+
     },
     name: {
         paddingTop: '-20px',
@@ -66,6 +75,8 @@ function Teammate(props) {
 function TeamPage() {
     const classes = useStyles();
     return (
+        <div className={classes.content}>
+            <h1>Our team:</h1>
             <div className={classes.all_team}>
                 <Teammate photo={'https://sun9-40.userapi.com/c854124/v854124491/1fc568/Hybr74JKEC4.jpg'}
                     name='Emelyanov Egor'
@@ -84,7 +95,7 @@ function TeamPage() {
                     link='https://github.com/Dexnkt001'
                 />
                 <Teammate
-                    photo='https://sun9-5.userapi.com/c854124/v854124100/200808/whe-vczaGzI.jpg'
+                    photo='https://sun9-33.userapi.com/c855128/v855128774/1ee910/VdOTPzUcMFA.jpg'
                     name='Kudenyuk Alexander'
                     git='Riasets'
                     link='https://github.com/Riasets'
@@ -96,6 +107,7 @@ function TeamPage() {
                     link='https://github.com/aplefull'
                 />
             </div>
+        </div>
     )
 }
 
