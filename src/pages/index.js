@@ -1,17 +1,17 @@
 import React from "react"
-import { Link, useStaticQuery, StaticQuery, graphql } from "gatsby"
-import TextField from '@material-ui/core/TextField';
-import MenuItem from '@material-ui/core/MenuItem';
+import { Link } from "gatsby"
+// import TextField from '@material-ui/core/TextField';
+// import MenuItem from '@material-ui/core/MenuItem';
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const langs = ['ru', 'by', 'en'];
+//const langs = ['ru', 'by', 'en'];
 
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
 
-  return(
+  return (
     <Layout>
       <SEO title="Home" />
       <h1>Hi people</h1>
@@ -23,7 +23,7 @@ const IndexPage = ({data}) => {
       <p>{data.contentfulLongText.by.content[0].content[0].value}</p>
       <Link to="/page-2/">Go to page 2</Link>
       <br />
-      <Link to="/styleGuide/">Go to style guide</Link>
+      <Link to="/team-page/">Go to Team</Link>
     </Layout>
   )
 }
