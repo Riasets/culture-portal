@@ -1,0 +1,64 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.writer-list {
+    width: 550px;
+    margin: 40px auto;
+}
+
+.list-item {
+    list-style: none;
+    cursor: pointer;
+    font-size: 23px;
+    padding: 5px;
+}
+
+.section-name {
+    text-align: center;
+    font-size: 42px;
+    color: #f50057;
+    height: 45px;
+    margin: 30px;
+}
+
+.writer-image {
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+.writer-info {
+    margin: 40px;
+}
+
+.name{
+    text-align: center;
+    color: #f50057;
+}
+
+.years {
+    text-align: center;
+    color: rgb(251, 140, 0);
+    font-size: 20px;
+}
+
+.biography {
+    margin: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.author-page {
+  color: white;
+}
+
+.videoButton {
+    width: 190px;
+    margin: 20px auto;
+}
+
+.map-wrapper {
+    width: 500px;
+    height: 450px;
+    margin: 20px auto;
+}

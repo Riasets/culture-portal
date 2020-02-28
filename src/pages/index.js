@@ -7,12 +7,16 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-//const langs = ['ru', 'by', 'en'];
+
+import Navigation from "../components/Navigation/Navigation";
+
+const langs = ['ru', 'by', 'en'];
 
 const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Navigation />
       <SEO title="Home" />
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
