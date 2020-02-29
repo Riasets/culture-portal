@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, StaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, StaticQuery } from "gatsby"
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import { makeStyles } from '@material-ui/core/styles';
@@ -60,7 +60,6 @@ const IndexPage = () => {
   const classes = useStyles();
   const randomWrtiterInfo = AuthorInfo[randomWrtiter(AuthorInfo)];
   return (
-    document.addEventListener('mousemove', parallax),
     <div className={classes.scane}>
       <Navigation />
       <h1 className={classes.h1}>Welcome to our Belarusian cultural portal!!!</h1>
@@ -74,32 +73,5 @@ const IndexPage = () => {
     </div>
   )
 }
-
-
-export const data = graphql`query TextQuery{
-         contentfulLongText {
-          ru {
-            content {
-              content {
-                value
-              }
-            }
-          }
-          en {
-            content {
-              content {
-                value
-              }
-            }
-          }
-          by {
-            content {
-              content {
-                value
-              }
-            }
-          }
-        }
-      }`;
 
 export default IndexPage
