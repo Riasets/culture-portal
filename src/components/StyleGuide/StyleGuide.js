@@ -2,6 +2,8 @@ import React from 'react';
 import './style.css';
 import { makeStyles } from '@material-ui/core/styles';
 
+import Navigation from '../Navigation/Navigation';
+
 import CustomButton from './elements/CustomButton';
 import CheckboxLabels from './elements/CustomCheckbox';
 import RadioButtons from './elements/CustomRadioButtons';
@@ -13,6 +15,7 @@ import FaceIcon from '@material-ui/icons/Face';
 import PeopleIcon from '@material-ui/icons/People';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import WorkIcon from '@material-ui/icons/Work';
+import BrushIcon from '@material-ui/icons/Brush';
 
 const useStyles = makeStyles({
   styleGuideWrapper: {
@@ -61,6 +64,8 @@ const useStyles = makeStyles({
 function StyleGuide() {
   const classes = useStyles();
   return (
+    <>
+    <Navigation />
     <div className={classes.styleGuideWrapper}>
       <h2>Style Guide Page!</h2>
       <div>
@@ -99,6 +104,10 @@ function StyleGuide() {
             <p>Worklog</p>
             <WorkIcon className="icon-color"/>
           </div>
+          <div>
+            <p>Styles</p>
+            <BrushIcon className="icon-color"/>
+          </div>
         </div>
         <h3>Table:</h3>
         <SimpleTable />
@@ -106,6 +115,7 @@ function StyleGuide() {
         <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
       </div>
     </div>
+    </>
   );
 }
 
