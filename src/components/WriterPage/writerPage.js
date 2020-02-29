@@ -44,7 +44,7 @@ class WriterPage extends Component {
     </ul>
     :
     <div>
-      <div className="nav__elem" onClick={this.returnToAuthorList}>
+      <div className="nav__elem return-btn" onClick={this.returnToAuthorList}>
       <KeyboardReturnIcon className="icon-color"/>
       </div>
       <AuthorInfo authorObj={this.state.authorInfo}/>

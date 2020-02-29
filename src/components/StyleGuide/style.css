@@ -1,9 +1,10 @@
-html{
+html {
   overflow-x: hidden;
 }
 
 body {
   background-color: #2B3E50;
+  padding-top: 55px;
 }
 
 a {

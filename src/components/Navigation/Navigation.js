@@ -14,13 +14,13 @@ function Navigation() {
       <Link to="/"><div className="nav__elem">
         <HomeIcon className="icon-color" />
       </div></Link>
-      <Link to="/"><div className="nav__elem">
+      <Link to="/writerPage/"><div className="nav__elem">
         <FaceIcon className="icon-color" />
       </div></Link>
-      <Link to="/"><div className="nav__elem">
+      <Link to="/team-page/"><div className="nav__elem">
         <PeopleIcon className="icon-color" />
       </div></Link>
-      <Link to="/"><div className="nav__elem">
+      <Link to="/worklog/"><div className="nav__elem">
         <WorkIcon className="icon-color" />
       </div></Link>
       <Link to="/styleGuide/"><div className="nav__elem">
