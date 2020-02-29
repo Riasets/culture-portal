@@ -1,23 +1,57 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
+.writer-list-wrapper {
+    margin-top: 60px;
+}
+
+.writer-list-header {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    color: white;
+    width: 550px;
+    margin: 0 auto;
+    font-size: 28px;
+}
+
 .writer-list {
     width: 550px;
     margin: 40px auto;
-    margin-top: 160px;
+    margin-top: 15px;
 }
 
 .list-item {
     list-style: none;
     cursor: pointer;
     font-size: 23px;
-    padding: 5px;
-    margin-top: 30px;
+    padding: 15px;
+    margin: 0px;
+    margin-top: -1px;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     color: white;
+    border: 1px solid #fdfdfd;
 }
 
-.list-item:hover {
-    color: rgb(251, 140, 0);
+.list-item:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+.list-item:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+.list-item:nth-child(even) {
+    background-color: rgba(245, 0, 87);
+}
+
+.list-item:nth-child(even):hover {
+    color: rgb(61, 55, 55);
+}
+
+.list-item:nth-child(odd) {
+    background-color: rgba(251, 140, 0);
+}
+
+.list-item:nth-child(odd):hover {   
+    color: rgb(65, 98, 207);
 }
 
 .section-name {
@@ -70,4 +104,49 @@
     width: 500px;
     height: 450px;
     margin: 20px auto;
+}
+
+.search-container {
+    padding-top: 64px;
+    width: 512px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 24px;
+
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 14px;
+    line-height: 18px;
+    
+    color: whitesmoke;
+    background-color: transparent;
+    background-image: url("https://files.catbox.moe/iil1yi.png");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+    border-radius: 50px;
+    border: 1px solid whitesmoke;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.search-input:hover,
+.search-input:focus {
+    padding: 12px 0;
+    outline: 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid whitesmoke;
+    border-radius: 0;
+    background-position: 100% center;
+}
+
+.search-input::placeholder {
+    color: color(whitesmoke a(0.8));
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }

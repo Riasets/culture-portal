@@ -57,10 +57,15 @@ class WriterPage extends Component {
     );
     const content = !this.state.isAuthorInfo ?
     <div>
-      <input value={this.state.value} onChange={this.handleChange} type="search" placeholder="Search" ref={this.searchRef} />
-      <ul className="writer-list">
+      <div className="search-container">
+        <input value={this.state.value} onChange={this.handleChange} type="search" placeholder="Search" ref={this.searchRef} className="search-input"/>
+      </div>
+      <div className="writer-list-wrapper">
+        <p className="writer-list-header">Writers list:</p>
+        <ul className="writer-list">
           {writersList}
-      </ul>
+        </ul>
+      </div>
     </div>
     :
     <div>
