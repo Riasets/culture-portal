@@ -3,6 +3,7 @@ import './dis.css';
 import { makeStyles } from '@material-ui/core/styles';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
+import Navigation from '../Navigation/Navigation';
 
 const useStyles = makeStyles({
     content: {
@@ -78,6 +79,7 @@ function TeamPage() {
     const classes = useStyles();
     return (
         <div className={classes.content}>
+            <Navigation />
             <h1>Our team:</h1>
             <div className={classes.all_team}>
                 <Teammate photo={'https://sun9-40.userapi.com/c854124/v854124491/1fc568/Hybr74JKEC4.jpg'}
