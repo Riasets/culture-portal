@@ -1,0 +1,39 @@
+nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  transition: ease-in-out .4s;
+}
+
+.nav__elem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  background: #f50057;
+  width: 50px;
+  height: 50px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: ease-in-out .4s;
+}
+
+.return-btn {
+  position: absolute;
+  top: 0;
+}
+
+.nav__elem:hover {
+  background: #fb8c00;
+  border-radius: 4px;
+  transition: ease-in-out .4s;
+}
+
+.nav__elem:hover .icon-color {
+  color: #f50057;
+  transition: ease-in-out .4s;
+}

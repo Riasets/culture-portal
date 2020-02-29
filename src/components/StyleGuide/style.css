@@ -1,0 +1,54 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #2B3E50;
+  padding-top: 55px;
+}
+
+a {
+  text-decoration: none
+}
+
+.custom-checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-color {
+  color: rgb(251, 140, 0);
+  transition: ease-in-out .2s;
+}
+
+.icon-color:hover {
+  color: #f50057;
+  cursor: pointer;
+  transition: ease-in-out .2s;
+}
+
+.table-head th{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.table-body th, .table-body td {
+  color: #fb8c00;
+}
+
+.table-container {
+  background-color: #3f51b5 !important;
+}
+
+.simple-table {
+  max-width: 700px;
+  margin: auto;
+  padding: 0 15px;
+}
