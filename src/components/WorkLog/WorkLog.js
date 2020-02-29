@@ -5,6 +5,9 @@ import SimpleTable from './elements/Table';
 import PrimaryCheckbox from './elements/PrimaryCheckbox';
 import SecondaryCheckbox from './elements/SecondaryCheckbox';
 import PropTypes from "prop-types";
+import Navigation from '../Navigation/Navigation';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const useStyles = makeStyles({
     worklogTitle: {
@@ -69,9 +72,10 @@ const people = [
 ];
 
 function WorkLog() {
-    const classes = useStyles(); 
+    const classes = useStyles();
     return (
         <Fragment>
+            <Navigation />
             <h1 className={classes.worklogTitle}>WorkLog page.</h1>
             {people.map(item => (
                 <div className={classes.tableWrappper} key={item.name}>
@@ -110,7 +114,7 @@ function WorkLog() {
                 <PrimaryCheckbox text={'colors and its purpose'}/>
                 <PrimaryCheckbox text={'icons'}/>
                 <SecondaryCheckbox text={'Deployment'}/>
-                <SecondaryCheckbox text={'Different languages'}/>
+                <FormControlLabel disabled control={<Checkbox value="checkedD" />} label="Different languages" />
             </div>
             <div className={classes.difficulties}>
                 <p>Main difficulties:</p>
@@ -126,7 +130,7 @@ function WorkLog() {
 WorkLog.propTypes = {
     rows: PropTypes.array,
   }
-  
+
 WorkLog.defaultProps = {
   rows: [],
 }

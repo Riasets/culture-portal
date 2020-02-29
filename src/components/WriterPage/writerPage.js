@@ -7,7 +7,7 @@ import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
 import ImageGallery from 'react-image-gallery';
-
+import Navigation from '../Navigation/Navigation';
 
 class WriterPage extends Component {
   constructor(props) {
@@ -57,6 +57,7 @@ class WriterPage extends Component {
     );
     const content = !this.state.isAuthorInfo ?
     <div>
+      <Navigation />
       <div className="search-container">
         <input value={this.state.value} onChange={this.handleChange} type="search" placeholder="Search" ref={this.searchRef} className="search-input"/>
       </div>
@@ -69,6 +70,7 @@ class WriterPage extends Component {
     </div>
     :
     <div>
+      <Navigation />
       <div className="nav__elem return-btn" onClick={this.returnToAuthorList}>
       <KeyboardReturnIcon className="icon-color"/>
       </div>
