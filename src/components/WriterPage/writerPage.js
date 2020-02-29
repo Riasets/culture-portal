@@ -16,7 +16,10 @@ class WriterPage extends Component {
       isAuthorInfo: false,
       authorInfo: null,
       isVideoOn: false,
+      value: '',
+      writersArr: WritersInfo,
     }
+    this.searchRef = React.createRef();
   }
 
   handleClick = (authorObj) => {
@@ -32,16 +35,33 @@ class WriterPage extends Component {
     });
   }
 
+  handleChange = (event) => {
+    this.setState({
+      value: event.target.value
+    });
+    this.sortAuthorInfo();
+  }
 
+  sortAuthorInfo = () => {
+    const sortWriterArr = WritersInfo.filter((obj) => {
+      return obj.name.toLowerCase().indexOf(this.searchRef.current.value.toLowerCase().trim()) === -1 ? false : true
+    });
+    this.setState({
+      writersArr: sortWriterArr
+    });
+  }
 
   render() {
-    const writersList = WritersInfo.map((el) =>
+    const writersList = this.state.writersArr.map((el) =>
       <li key={el.id} id={el.id} onClick={this.handleClick.bind(this, el)} className="list-item">{el.name}</li>
     );
     const content = !this.state.isAuthorInfo ?
-    <ul className="writer-list">
-      {writersList}
-    </ul>
+    <div>
+      <input value={this.state.value} onChange={this.handleChange} type="search" placeholder="Search" ref={this.searchRef} />
+      <ul className="writer-list">
+          {writersList}
+      </ul>
+    </div>
     :
     <div>
       <div className="nav__elem return-btn" onClick={this.returnToAuthorList}>
