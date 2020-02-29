@@ -24,7 +24,11 @@ const useStyles = makeStyles({
     textAlign: 'center',
     '& h2': {
       margin: '50px 0px',
+      marginTop: '75px',
       fontSize: '50px',
+      ['@media only screen and (max-width: 351px)']: {
+        marginTop: '140px',
+      },
     },
     '& h3': {
       marginTop: '50px',
@@ -44,9 +48,21 @@ const useStyles = makeStyles({
   },
   red: {
     backgroundColor: '#f50057',
+    transition: 'ease-in-out .3s',
+    '&:hover': {
+      borderRadius: '12px',
+      transition: 'ease-in-out .3s',
+      cursor: 'pointer',
+    }
   },
   orange: {
     backgroundColor: '#fb8c00',
+    transition: 'ease-in-out .3s',
+    '&:hover': {
+      borderRadius: '12px',
+      transition: 'ease-in-out .3s',
+      cursor: 'pointer',
+    }
   },
   iconContainer: {
     display: 'flex',
@@ -54,6 +70,7 @@ const useStyles = makeStyles({
     flexWrap: 'wrap',
     '& p': {
       margin: 0,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     },
     '& div': {
       margin: '10px',

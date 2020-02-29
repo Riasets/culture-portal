@@ -5,6 +5,8 @@ nav {
   flex-wrap: wrap;
   right: 0;
   top: 0;
+  z-index: 100;
+  transition: ease-in-out .4s;
 }
 
 .nav__elem {
@@ -17,12 +19,16 @@ nav {
   height: 50px;
   font-size: 10px;
   cursor: pointer;
+  transition: ease-in-out .4s;
 }
 
 .nav__elem:hover {
   background: #fb8c00;
+  border-radius: 4px;
+  transition: ease-in-out .4s;
 }
 
 .nav__elem:hover .icon-color {
   color: #f50057;
+  transition: ease-in-out .4s;
 }

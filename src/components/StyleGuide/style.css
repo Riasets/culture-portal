@@ -23,11 +23,13 @@ a {
 
 .icon-color {
   color: rgb(251, 140, 0);
+  transition: ease-in-out .2s;
 }
 
 .icon-color:hover {
   color: #f50057;
   cursor: pointer;
+  transition: ease-in-out .2s;
 }
 
 .table-head th{

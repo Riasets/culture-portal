@@ -46,9 +46,11 @@ const useStyles = makeStyles({
     },
     iconColor: {
         color: '#fb8c00',
+        transition: 'ease-in-out .2s',
         '&:hover': {
             color: '#f50057',
             cursor: 'pointer',
+            transition: 'ease-in-out .2s',
         }
     },
     link: {
