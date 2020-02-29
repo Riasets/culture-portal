@@ -24,7 +24,7 @@ nav {
 
 .return-btn {
   position: absolute;
-  top: 0;
+  top: 60px;
 }
 
 .nav__elem:hover {
