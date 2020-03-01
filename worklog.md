@@ -81,4 +81,4 @@ Main difficulties:
   * Splitting the task
   * Understanding what each person should do
 
-#Total: 240/280
+# Total: 240/280
